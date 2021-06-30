@@ -1,0 +1,42 @@
+LIVE #010 - Room Database: Persistência de Dados com Kotlin 
+
+O que é persistir dados? 
+
+É você salvar os dados da sua aplicação para que eles persistam além da daquela execução, em algum lugar que seu software seja capaz de recuperar.
+
+ - Dados em arquivo
+ - DataStore: Dados chave-valor simples
+ - SharedPreferences Dados chave-valor simples
+ - Banco de dados <- É a solução para você persistir GRANDES quantidades de dados, ou dados completos.
+
+ No Android, o nosso banco de dados padrão é o SQLite.
+
+Room é uma biblioteca ORM, Object Relational Mapping.
+
+Em outras palavras, a Room mapeará nossos objetos de banco de dados para objetos Java.
+
+O Room oferece uma camada de abstração sobre o SQLite para permitir acesso fluente ao banco de dados enquanto aproveita todo o poder do SQLite.
+
+Porque usar o Room Database? Algumas vantagens em relação ao SQLite:
+
+	Verificação em tempo de compilação de consultas SQL.
+
+		Cada @Query e @Entity é verificado no tempo de compilação, o que preserva seu aplicativo de problemas de travamento no tempo de execução e não apenas verifica a sintaxe única, mas também tabelas ausentes.
+
+	Facilmente integrado com outros Architecture Components do JetPack (como LiveData, por exemplo)
+
+	Muito menos código inútil para fazer as operações junto ao banco de dados.
+
+O Room é composto por três componentes principais:
+
+Banco de dados: contém o suporte do banco de dados e serve como o principal ponto de acesso para a conexão com dados relacionais e persistentes do app.
+
+Entidade: representa uma tabela dentro do banco de dados.
+
+DAO(Data access object): contém os métodos utilizados para acessar o banco de dados.
+
+PRÓXIMA AULA:
+
+	- Listar os dados do banco de dados em um RecyclerView
+
+	- Criar um botão de exclusão do dado no bd, nos itens do RecyclerView.
